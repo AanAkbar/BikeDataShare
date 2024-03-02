@@ -1,8 +1,8 @@
-import streamlit as st 
+import streamlit as st
+import pandas as pd
  
-st.write(
-    """
-    # My first app
-    Hello, para calon praktisi data masa depan!
-    """
-)
+uploaded_file = st.file_uploader('Choose a CSV file')
+ 
+if uploaded_file:
+    df = pd.read_csv(uploaded_file)
+    st.dataframe(df)
