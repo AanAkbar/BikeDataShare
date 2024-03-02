@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
  
 uploaded_file = st.file_uploader('Choose a CSV file')
  
@@ -9,7 +11,15 @@ if uploaded_file:
 
 
 
-values = st.slider(
-    label='Select a range of values',
-    min_value=0, max_value=100, value=(0, 100))
-st.write('Values:', values)
+
+ 
+with st.container():
+    st.write("Inside the container")
+    
+    x = np.random.normal(15, 5, 250)
+ 
+    fig, ax = plt.subplots()
+    ax.hist(x=x, bins=15)
+    st.pyplot(fig) 
+ 
+st.write("Outside the container")
