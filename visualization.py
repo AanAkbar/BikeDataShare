@@ -9,7 +9,7 @@ if uploaded_file:
     st.dataframe(df)
 
 
-
+import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
  
