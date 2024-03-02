@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
+
  
 uploaded_file = st.file_uploader('Choose a CSV file')
  
@@ -11,7 +10,8 @@ if uploaded_file:
 
 
 
-
+import matplotlib.pyplot as plt
+import numpy as np
  
 with st.container():
     st.write("Inside the container")
