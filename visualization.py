@@ -1,5 +1,7 @@
-import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import streamlit as st
 
  
 uploaded_file = st.file_uploader('Choose a CSV file')
@@ -9,18 +11,5 @@ if uploaded_file:
     st.dataframe(df)
 
 
-import streamlit as st
-import matplotlib.pyplot as plt
-import numpy as np
- 
-with st.container():
-    st.write("Month")
-    
-    x = np.random.normal(15, 5, 250)
- 
-    fig, ax = plt.subplots()
-    ax.hist(x="mnth", bins="cnt)
-    st.pyplot(fig) 
- 
-st.write("Count of Rentals")
+
 
