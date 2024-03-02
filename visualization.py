@@ -1,6 +1,5 @@
-import pandas as pd
-import seaborn as sns
-import streamlit as st
+conda activate main-ds
+pip install streamlit babel
 
 
 
